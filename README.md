@@ -38,3 +38,18 @@ A WordPress plugin that automatically schedules and manages monthly meetings wit
 ## Usage
 
 Use the shortcode to display meetings: 
+
+## Changelog
+
+### 1.5.1
+- Fixed initialization order for logging system
+- Improved plugin activation process
+- Added error handling for logger initialization
+
+### 1.5.0
+- Initial release
+- Added automated meeting scheduling
+- Integrated Zoom API
+- Added federal holiday handling
+- Implemented countdown timer
+- Added logging system 

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: FLI Custom Meetings
  * Description: Automatically schedules monthly meetings while skipping federal holidays and integrates with Zoom.
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author: Your Name
  * Text Domain: fli-custom-meetings
  */
@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('FLI_CUSTOM_MEETINGS_VERSION', '1.5.0');
+define('FLI_CUSTOM_MEETINGS_VERSION', '1.5.1');
 define('FLI_CUSTOM_MEETINGS_PATH', plugin_dir_path(__FILE__));
 define('FLI_CUSTOM_MEETINGS_URL', plugin_dir_url(__FILE__));
 
