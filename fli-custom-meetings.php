@@ -56,10 +56,10 @@ class FLI_Custom_Meetings {
     }
 
     private function init_plugin() {
-        // Initialize logger
+        // Initialize logger first
         $this->logger = FLI_Logger::get_instance();
         
-        // Initialize components
+        // Now initialize other components
         $this->zoom_api = new FLI_Zoom_API(
             get_option('fli_custom_meetings_api_key'),
             get_option('fli_custom_meetings_api_secret')
@@ -116,12 +116,13 @@ class FLI_Custom_Meetings {
 }
 
 // Initialize plugin
-$fli_custom_meetings = new FLI_Custom_Meetings();
+$GLOBALS['fli_custom_meetings'] = new FLI_Custom_Meetings();
 
 // Make logger globally accessible
 function fli_log($message, $level = 'info') {
-    global $fli_custom_meetings;
-    $fli_custom_meetings->get_logger()->log($message, $level);
+    if (isset($GLOBALS['fli_custom_meetings'])) {
+        $GLOBALS['fli_custom_meetings']->get_logger()->log($message, $level);
+    }
 }
 
 // Register activation/deactivation hooks
